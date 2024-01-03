@@ -4,4 +4,19 @@
 
 
 
+.hero{
+  background-image: url('../images/castle.jpg'); 
+  background-position: center; 
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 40vh;
+}
 
+
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
