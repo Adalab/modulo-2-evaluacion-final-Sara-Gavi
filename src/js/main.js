@@ -10,21 +10,31 @@ const inputSearch = document.querySelector('.js__inputSearch');
 //VARIABLES DE DATOS
 
 let charactersData = [];
-let favoritesData = [];
+const favoritesData = [];
+
 
 //FUNCIONES
 //Funciones para pintar los personajes: 
 function renderOne( oneCharacterData ) {
     const imageUrl = oneCharacterData.imageUrl || 'https://via.placeholder.com/210x295/ffffff/555555/?text=Disney';
+    const favoritesCharacterIndex = favoritesData.findIndex((onefavorite) => onefavorite._id === parseInt(oneCharacterData._id));
 
-         charactersResultUl.innerHTML += `<li class="characterCard js__characters" data-id="${oneCharacterData._id}">
+    if(favoritesCharacterIndex === -1){
+       charactersResultUl.innerHTML += `<li class="characterCard js__characters" data-id="${oneCharacterData._id}">
            <img class="characterCard__image" src="${imageUrl}" alt="${oneCharacterData.name}">
            <h3 class="characterCard__name">${oneCharacterData.name}</h3>
        </li>
      `;
+    } else {
+      charactersResultUl.innerHTML += `<li class="characterCard favorites js__characters " data-id="${oneCharacterData._id}">
+      <img class="characterCard__image" src="${imageUrl}" alt="${oneCharacterData.name}">
+      <h3 class="characterCard__name">${oneCharacterData.name}</h3>
+  </li>
+`;
+    }
    };
 
-function renderAll (){
+function renderAll (data){
     for (const eachCharacter of charactersData ){
         renderOne(eachCharacter);
     }
@@ -85,20 +95,41 @@ function handleClickfavorites (event){
 
 //EVENTOS
 
+/*formSearch.addEventListener('submit', (event) => {
+  event.preventDefault();
+  console.log(inputSearch.value);
+
+  filteredData = charactersData.filter((oneCharacter) => oneCharacter.name.toLowerCase().includes(inputSearch.value.toLowerCase()));
+
+  renderAll(filteredData);
+  
+  });*/
+
+
+
+
 // Filtrar por el personaje buscado 
 
 formSearch.addEventListener('submit', (event) => {
   event.preventDefault();
-  console.log(inputSearch.value);
+  //console.log(inputSearch.value);
   
     fetch(`//api.disneyapi.dev/character?name=${inputSearch.value}`)
-      .then((response) => response.json())
-      .then((data => {
-        charactersData = data.data;
+      .then(response => response.json())
+      .then(data => {
+        
+        if(Array.isArray(data.data)){
+          charactersData = data.data; 
+        } else {
+          charactersData = [data.data]
+        }
+
+        console.log(charactersData)
+
+    charactersResultUl.innerHTML ='';
 
     renderAll();
-  }));
-
+  });
 });
 
 
@@ -109,7 +140,7 @@ fetch('//api.disneyapi.dev/character?pageSize=50')
   .then( data => {
     charactersData = data.data;
 
-    renderAll();
+    renderAll(charactersData);
   });
 
   
