@@ -4,6 +4,9 @@
 const charactersResultUl = document.querySelector('.js__charactersResultUl');
 const charactersFavoritesUl = document.querySelector('.js__charactersFavoritesUl');
 
+const formSearch = document.querySelector('.js__formSearch');
+const inputSearch = document.querySelector('.js__inputSearch');
+
 //VARIABLES DE DATOS
 
 let charactersData = [];
@@ -80,8 +83,25 @@ function handleClickfavorites (event){
 
 };
 
-
 //EVENTOS
+
+// Filtrar por el personaje buscado 
+
+formSearch.addEventListener('submit', (event) => {
+  event.preventDefault();
+  console.log(inputSearch.value);
+  
+    fetch(`//api.disneyapi.dev/character?name=${inputSearch.value}`)
+      .then((response) => response.json())
+      .then((data => {
+        charactersData = data.data;
+
+    renderAll();
+  }));
+
+});
+
+
 //CÓDIGO CUANDO CARGA LA PÁGINA
 
 fetch('//api.disneyapi.dev/character?pageSize=50')

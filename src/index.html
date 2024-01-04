@@ -4,18 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./scss/main.scss" />
     <link rel="icon" href="./images/favicon.png" />
   </head>
   <body>
-    <header class="hero"></header>
+    <header class="hero">
+      <h1 class="hero__title">Find your character!</h1>
+      
+    </header>
 
     <main class="main">
 
-      <form class="form__search"> 
+      <form class="form__search js__formSearch"> 
         <label class="search__label" for="search">
           Search your character!
-         <input class="search__input" type="text" name="search" id="search"/> 
+         <input class="search__input js__inputSearch" type="text" name="search" id="search"/> 
         </label>
         <input class="search__btn" type="submit" value="Search">
       </form>
