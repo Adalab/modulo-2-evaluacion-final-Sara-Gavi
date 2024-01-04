@@ -7,18 +7,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./scss/main.scss" />
     <link rel="icon" href="./images/favicon.png" />
   </head>
   <body>
     <header class="hero">
-      <h1 class="hero__title">Find your character!</h1>
-      
+      <section class="hero__content">
+         <h1 class="hero__title">Find your character!</h1>
+         <div class="hero__button">
+          <a class="button__a" href="#form">Start</a>
+         </div>
+      </section>
     </header>
 
     <main class="main">
 
-      <form class="form__search js__formSearch"> 
+      <form class="form__search js__formSearch" id="form"> 
         <label class="search__label" for="search">
           Search your character!
          <input class="search__input js__inputSearch" type="text" name="search" id="search"/> 

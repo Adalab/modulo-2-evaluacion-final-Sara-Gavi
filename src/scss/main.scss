@@ -4,8 +4,6 @@
 html {
   font-size: 62.5%; /* Establece el tamaño de la fuente en 62.5% */
 }
-
-
 .hero{
   background-image: url('../images/castleMagic.png'); 
   background-position: center; 
@@ -17,8 +15,16 @@ html {
   align-items: center;
 }
 
+.hero__content{
+    margin-top: 32rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .hero__title{
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Concert One', sans-serif;
   text-align: center;
   font-size: 4.5rem;
   font-weight: bold;
@@ -30,7 +36,30 @@ html {
   text-transform: uppercase;
 }
 
+.hero__button{
+  background-color:#529cf1 ;
+  padding: 7px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  margin-top: 19px;
+}
 
+.hero__button:hover{
+  background-color: #ec9223;
+}
+
+.button__a{
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  font-weight:bold;
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+
+//main
 
 .main {
     display: flex;
@@ -39,6 +68,65 @@ html {
     padding: 20px;
   }
 
+  .form__search{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+.search__label {
+  margin-bottom: 10px; 
+  display: flex;
+  flex-direction: column;
+  font-family:'Open Sans', sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  text-align: center;
+}
+
+.search__input {
+  padding: 8px;
+  margin-bottom: 10px; 
+  margin-top: 10px;
+}
+
+.search__btn {
+  padding: 6px 15px;
+  background-color:#ec9223;
+  color: white;
+  font-family:'Open Sans', sans-serif;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+
   .favorites{
     background-color: orange;
   }
+
+
+
+
+
+
+
+
+  @media (min-width:768px){
+
+    .hero__title{
+        font-size: 6rem;
+        line-height: 10.6rem;
+    }
+}
+
+@media (min-width:1200px){
+
+    .hero__title{
+        font-size: 7rem;
+        line-height: 13.2rem;
+    }
+    
+}
