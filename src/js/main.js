@@ -10,7 +10,7 @@ const inputSearch = document.querySelector('.js__inputSearch');
 //VARIABLES DE DATOS
 
 let charactersData = [];
-const favoritesData = [];
+const favoritesData = JSON.parse(localStorage.getItem('favoritesData')) || []; 
 
 
 //FUNCIONES
@@ -81,11 +81,14 @@ function handleClickfavorites (event){
         //No esta en el array de favoritos. Lo pongo!
 
         favoritesData.push (selectedCharacterData);
+        localStorage.setItem('favoritesData', JSON.stringify(favoritesData));
     } else {
         // La quito!!
 
         favoritesData.splice(favoritesCharacterIndex, 1);
+        localStorage.setItem('favoritesData', JSON.stringify(favoritesData));
     }
+
 
     renderFavorites();
 
@@ -143,7 +146,9 @@ fetch('//api.disneyapi.dev/character?pageSize=50')
     renderAll(charactersData);
   });
 
-  
+  renderFavorites();
 
+ 
+  
   
 
