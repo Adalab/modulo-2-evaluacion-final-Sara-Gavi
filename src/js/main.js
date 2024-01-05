@@ -52,7 +52,7 @@ const allCharactersLi = document.querySelectorAll('.js__characters');
 function renderOneFavorite( favoriteData ) {
     const imageUrl = favoriteData.imageUrl || 'https://via.placeholder.com/210x295/ffffff/555555/?text=Disney';
     charactersFavoritesUl.innerHTML += `
-    <li class="characterCard js__character">
+    <li class="characterCard js__character favorites">
     <img class="characterCard__image" src="${imageUrl}" alt="${favoriteData.name}">
     <h3 class="characterCard__name">${favoriteData.name}</h3>
 </li>`;
