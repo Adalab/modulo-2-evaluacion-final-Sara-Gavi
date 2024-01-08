@@ -1,0 +1,54 @@
+.hero{
+    background-image: url('../images/castleMagic.png'); 
+    background-position: center; 
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .hero__content{
+      margin-top: 30rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  .hero__title{
+    font-family: 'Concert One', sans-serif;
+    text-align: center;
+    font-size: 4.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.31;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+  
+  .hero__button{
+    background-color:#ec9223;
+    padding: 7px 20px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .hero__button:hover{
+    background-color:#529cf1;
+  }
+  
+  .button__a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    font-weight:600;
+    font-family: 'Concert One', sans-serif;
+    letter-spacing: 1.5px;
+  }
+  

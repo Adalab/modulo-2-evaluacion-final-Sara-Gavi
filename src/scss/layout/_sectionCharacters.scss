@@ -1,0 +1,87 @@
+
+.section__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px; 
+    margin-top: 15px;
+  }
+  
+  .cards{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  .favorites__title{
+    text-align: center;
+    margin-bottom: 10px;
+    font-family: 'Concert One', sans-serif;
+    font-size: 20px;
+    color: #ec9223;
+  }
+  .characters__title{
+    text-align: center;
+    margin-bottom: 10px;
+    font-family: 'Concert One', sans-serif;
+    font-size: 20px;
+    color: #529cf1;
+  }
+  
+  
+  .characterCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border: 10px solid #529cf1; 
+    border-radius: 8px; 
+    margin: 10px; 
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+  
+  .characterCard__image {
+    border-radius: 8px 8px 0 0; 
+  }
+  
+  .characterCard__name {
+    margin-top: 10px; 
+    font-family:'Concert One', sans-serif;
+    font-size: 18px;
+    color: #ec9223;
+  }
+  
+  
+    .favorites{
+      background-color: #ffef60;
+    }
+  
+  
+    @media (min-width:768px){
+  
+      .hero__title{
+          font-size: 6rem;
+          line-height: 10.6rem;
+      }
+  
+    
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); 
+      }
+  }
+  
+  @media (min-width:1200px){
+  
+      .hero__title{
+          font-size: 7rem;
+          line-height: 13.2rem;
+      }
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); 
+      }
+      
+  
+      
+  }
