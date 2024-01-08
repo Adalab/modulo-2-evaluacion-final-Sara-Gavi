@@ -55,6 +55,7 @@ function renderOneFavorite( favoriteData ) {
     <li class="characterCard js__character favorites">
     <img class="characterCard__image" src="${imageUrl}" alt="${favoriteData.name}">
     <h3 class="characterCard__name">${favoriteData.name}</h3>
+    <button class="removeBtn js__removeButtons">X</button>
 </li>`;
   };
   
@@ -65,6 +66,7 @@ function renderOneFavorite( favoriteData ) {
        renderOneFavorite(onefavorite) ;
       }
   };
+
 
 
 //FUNCIONES DE EVENTOS (HANDLER)
@@ -96,19 +98,12 @@ function handleClickfavorites (event){
 
 };
 
+// Función para manejar la eliminación de favoritos
+function handleRemoveFavorite(event) {
+
+};
+
 //EVENTOS
-
-/*formSearch.addEventListener('submit', (event) => {
-  event.preventDefault();
-  console.log(inputSearch.value);
-
-  filteredData = charactersData.filter((oneCharacter) => oneCharacter.name.toLowerCase().includes(inputSearch.value.toLowerCase()));
-
-  renderAll(filteredData);
-  
-  });*/
-
-
 
 
 // Filtrar por el personaje buscado 
@@ -134,6 +129,28 @@ formSearch.addEventListener('submit', (event) => {
     renderAll();
   });
 });
+
+
+/*formSearch.addEventListener('submit', (event) => {
+  event.preventDefault();
+  console.log(inputSearch.value);
+
+  filteredData = charactersData.filter((oneCharacter) => oneCharacter.name.toLowerCase().includes(inputSearch.value.toLowerCase()));
+
+  renderAll(filteredData);
+  
+  });*/
+
+
+//Evento para el botón de eliminar favorito de la lista 
+
+const removeButtons = document.querySelectorAll('.js__removeButtons');
+
+ removeButtons.forEach(removebutton => {
+        removebutton.addEventListener('click', handleRemoveFavorite);
+        console.log(removebutton);
+
+      });
 
 
 //CÓDIGO CUANDO CARGA LA PÁGINA
