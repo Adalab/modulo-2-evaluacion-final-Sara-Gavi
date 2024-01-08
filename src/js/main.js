@@ -83,7 +83,7 @@ function handleClickfavorites (event){
         favoritesData.push (selectedCharacterData);
         localStorage.setItem('favoritesData', JSON.stringify(favoritesData));
     } else {
-        // La quito!!
+        // La quito!! 
 
         favoritesData.splice(favoritesCharacterIndex, 1);
         localStorage.setItem('favoritesData', JSON.stringify(favoritesData));
