@@ -50,6 +50,25 @@
     font-size: 18px;
     color: #ec9223;
   }
+
+  .removeBtn {
+    margin-top: 10px;
+    background-color: #0084ff; 
+    color: #ffffff; 
+    border: none;
+    border-radius: 50%; 
+    width: 30px; 
+    height: 30px; 
+    font-size: 16px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .removeBtn:hover {
+    background-color: #cc0000; 
+  }
   
   
     .favorites{

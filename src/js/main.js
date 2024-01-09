@@ -139,7 +139,6 @@ function handleRemoveFavorite(event) {
 
 formSearch.addEventListener("submit", (event) => {
   event.preventDefault();
-  //console.log(inputSearch.value);
 
   fetch(`//api.disneyapi.dev/character?name=${inputSearch.value}`)
     .then((response) => response.json())
