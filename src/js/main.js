@@ -127,6 +127,7 @@ function handleRemoveFavorite(event) {
 
   if (favoritesCharacterIndex !== -1) {
     favoritesData.splice(favoritesCharacterIndex, 1);
+    localStorage.setItem("favoritesData", JSON.stringify(favoritesData));
 
     renderFavorites();
     renderAll();
