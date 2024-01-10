@@ -12,7 +12,7 @@ Bienvenid@s a FIND YOUR CHARACTER!, un lugar para explorar y descubrir las carta
 
 1. **Explora Personajes**: Dale click a START y Navega por la colección de personajes de Disney utilizando la barra de búsqueda o simplemente desplázate para ver algunos de ellos.
 
-2. **Guarda tus Favoritos**: Haz clic en la carta de un personaje para añadirlo a tu lista de favoritos. También puedes quitarlo clikcando de nuevo sobre ella.
+2. **Guarda tus Favoritos**: Haz clic en la carta de un personaje para añadirlo a tu lista de favoritos. También puedes quitarlo clickando de nuevo sobre ella o en la "X" de la carta.
 
 3. **Accede a tus Favoritos**: La sección de Favoritos esta al inicio de la página. Allí podrás ver la lista de personajes que has guardado.
 
@@ -40,15 +40,25 @@ Bienvenid@s a FIND YOUR CHARACTER!, un lugar para explorar y descubrir las carta
 ### JavasCript
 
 - **JavaScript Básico:**
+
   - Creación de código JavaScript con una sintaxis correcta y estructura bien organizada.
+
   - Uso de constantes y variables para almacenar información y reasignar valores.
+
   - Empleo de condicionales para ejecutar acciones diferentes según una condición dada.
+
   - Listados de Datos (Arrays): Manejo efectivo de listados de datos para organizar la información.
+
   - Utilización de funciones para estructurar el código de manera modular.
+
   - Modificación dinámica de la información del DOM para agregar contenido interactivo.
+
   - Escucha de eventos del DOM y respuesta adecuada a las interacciones del usuario.
+
   - Creación de peticiones mediante la API Fetch y el uso de promesas para manejar respuestas asincrónicas.
+
   - Utilización del localStorage para almacenar información en el navegador de manera persistente.
+
   - ...
 
 ---
